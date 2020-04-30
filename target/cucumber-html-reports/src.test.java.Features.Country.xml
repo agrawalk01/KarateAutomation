@@ -1,0 +1,37 @@
+<testsuite failures="0" name="src/test/java/Features/Country.feature" skipped="0" tests="3" time="3.772087">
+  <testcase classname="src.test.java.Features.Country" name="To fetch country details without parametrization" time="2.230469">
+    <system-out>* def config = read('classpath:test-config.json') ......................... passed
+Given url 'https://restcountries.eu/rest/v2/all' .......................... passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.Features.Country" name="To fetch country details with parametrization" time="0.778091">
+    <system-out>* def config = read('classpath:test-config.json') ......................... passed
+Given url 'https://restcountries.eu/rest/v2/all' .......................... passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+* def config = read('classpath:test-config.json') ......................... passed
+Given url config.countryapiURL ............................................ passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.Features.Country" name="To validate response value of India" time="0.763527">
+    <system-out>* def config = read('classpath:test-config.json') ......................... passed
+Given url 'https://restcountries.eu/rest/v2/all' .......................... passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+* def config = read('classpath:test-config.json') ......................... passed
+Given url config.countryapiURL ............................................ passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+* def config = read('classpath:test-config.json') ......................... passed
+Given url config.countryapiURL ............................................ passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+* def countryName = "India" ............................................... passed
+* def countryResponse = karate.jsonPath(response, "$[?(@.name == '" + countryName + "')]") . passed
+* match countryResponse[0].capital == 'New Delhi' ......................... passed
+* match countryResponse[0].area == 3287590.0 .............................. passed
+* match countryResponse[0].demonym == 'Indian' ............................ passed</system-out>
+  </testcase>
+</testsuite>

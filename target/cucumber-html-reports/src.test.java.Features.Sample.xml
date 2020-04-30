@@ -1,0 +1,18 @@
+<testsuite failures="0" name="src/test/java/Features/Sample.feature" skipped="0" tests="2" time="4.011519">
+  <testcase classname="src.test.java.Features.Sample" name="To fetch country details without parametrization" time="2.810683">
+    <system-out>* def config = read('classpath:test_config.json') ......................... passed
+Given url 'https://restcountries.eu/rest/v2/all' .......................... passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.Features.Sample" name="To fetch country details with parametrization" time="1.200836">
+    <system-out>* def config = read('classpath:test_config.json') ......................... passed
+Given url 'https://restcountries.eu/rest/v2/all' .......................... passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+* def config = read('classpath:test_config.json') ......................... passed
+Given url config.countryapiURL ............................................ passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed</system-out>
+  </testcase>
+</testsuite>

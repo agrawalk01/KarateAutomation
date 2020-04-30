@@ -1,0 +1,7 @@
+<testsuite failures="0" name="src/test/java/Features/Sample.feature" skipped="0" tests="1" time="2.372711">
+  <testcase classname="src.test.java.Features.Sample" name="To validate sample test run" time="2.372711">
+    <system-out>Given url 'https://restcountries.eu/rest/v2/all' .......................... passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed</system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,7 @@
+{
+
+"countryapiURL" : "https://restcountries.eu/rest/v2/all",
+"headerContent" : "application/json",
+"employeeapiURL" : "http://dummy.restapiexample.com/api/v1"
+
+}
